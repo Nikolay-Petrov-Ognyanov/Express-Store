@@ -56,7 +56,8 @@ function createToken(user) {
     return {
         _id: user._id,
         username: user.username,
-        accessToken: JWT.sign(payload, secret)
+        accessToken: JWT.sign(payload, secret),
+        purchases: user.purchases
     }
 }
 

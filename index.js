@@ -5,7 +5,7 @@ const trim = require("./middlewares/trim")
 const session = require("./middlewares/session")
 const userController = require("./controllers/userController")
 
-const connectionString = "mongodb://127.0.0.1:27017/auction"
+const connectionString = "mongodb://127.0.0.1:27017/store"
 
 start()
 

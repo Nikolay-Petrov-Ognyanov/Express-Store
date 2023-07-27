@@ -1,8 +1,8 @@
+const User = require("../models/User")
 const userService = require("../services/userService")
 const userController = require("express").Router()
 const { body, validationResult } = require("express-validator")
 const { parseError } = require("../utility/parser")
-const User = require("../models/User")
 
 userController.get("/", async (req, res) => {
     try {
