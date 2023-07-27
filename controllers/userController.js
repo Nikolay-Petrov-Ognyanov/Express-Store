@@ -27,9 +27,7 @@ userController.post("/register",
         try {
             const { errors } = validationResult(req)
 
-            if (errors.length > 0) {
-                throw errors
-            }
+            if (errors.length > 0) throw errors
 
             const {
                 username,
@@ -76,7 +74,6 @@ userController.post("/logout", async (req, res) => {
 userController.put("/:userId", async (req, res) => {
     try {
         const user = req.body
-
         const updatedUser = await User.findOneAndUpdate({ _id: user._id }, user)
 
         res.status(200).json(updatedUser)

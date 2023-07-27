@@ -21,6 +21,13 @@ async function register(
         const user = await User.create({
             username,
             hashedPassword: await bcrypt.hash(password, 10),
+            purchases: {
+                fruits: 0,
+                vegetables: 0,
+                grains: 0,
+                beans: 0,
+                mushrooms: 0,
+            }
         })
 
         return createToken(user)
